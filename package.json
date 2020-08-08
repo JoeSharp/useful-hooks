@@ -1,5 +1,5 @@
 {
-  "name": "@joesharp/useful-hooks",
+  "name": "useful-hooks",
   "version": "1.0.0",
   "description": "Collection of useful React hooks for general purpose use",
   "main": "dist/index.js",
