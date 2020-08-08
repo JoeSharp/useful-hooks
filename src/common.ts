@@ -23,26 +23,3 @@ export function objToString(o?: object) {
         .join(" ")
     : "none";
 }
-
-// tslint:disable-next-line: no-empty
-export const emptyObserver = () => {};
-
-export const anyComparator: Comparator<any> = (a: any, b: any) => a - b;
-
-/**
- * Comparator function that uses simple arithmetic comparison.
- * based on https://www.w3schools.com/js/js_array_sort.asp
- * If the result is negative a is sorted before b.
- * If the result is positive b is sorted before a.
- * If the result is 0 no changes are done with the sort order of the two values.
- *
- * @param {number | string} a First item
- * @param {number | string} b Second item
- */
-export const arithmeticComparator: Comparator<number> = (
-  a: number,
-  b: number
-) => a - b;
-
-export const stringComparator: Comparator<string> = (a: string, b: string) =>
-  a.localeCompare(b);

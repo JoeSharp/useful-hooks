@@ -1,4 +1,4 @@
-import { simpleSwap, arithmeticComparator, stringComparator } from "./common";
+import { simpleSwap } from "./common";
 
 test("Swap (numbers)", () => {
   const data = [5, 6, 9, 1, 3];
@@ -19,24 +19,4 @@ test("Swap (objects)", () => {
 
   const names = data.map((n) => n.name);
   expect(names).toStrictEqual(["Eloise", "Steve", "Joe"]);
-});
-
-test("Compare (numbers)", () => {
-  const inOrder = arithmeticComparator(5, 6);
-  const outOfOrder = arithmeticComparator(8, 3);
-  const isEqual = arithmeticComparator(4, 4);
-
-  expect(inOrder).toBeLessThan(0);
-  expect(outOfOrder).toBeGreaterThan(0);
-  expect(isEqual).toBe(0);
-});
-
-test("Compare (strings)", () => {
-  const inOrder = stringComparator("alan", "zoe");
-  const outOfOrder = stringComparator("tom", "dave");
-  const isEqual = stringComparator("zephyr", "zephyr");
-
-  expect(inOrder).toBeLessThan(0);
-  expect(outOfOrder).toBeGreaterThan(0);
-  expect(isEqual).toBe(0);
 });
